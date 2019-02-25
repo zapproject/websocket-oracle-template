@@ -1,5 +1,5 @@
 const server = require("http").createServer();
- const io = require("socket.io")(server,{path:"/ws/socket.io/"});
+ const io = require("socket.io")(server)
  const socketioAuth = require("socketio-auth");
 const Web3 = require("web3")
 const Redis = require("redis")
@@ -66,7 +66,7 @@ io.on("connection",(socket:any)=>{
 async function getData(){
   let count=1
   while(true){
-    io.sockets.emit("signaldata",`Counter :`,count)
+    io.sockets.emit("signaldata",`Counter :`+count)
     count++
     await (()=>{return new Promise(resolve => setTimeout(resolve, 1000))})()
   }
