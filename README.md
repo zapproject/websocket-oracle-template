@@ -11,11 +11,11 @@
 *USER*
 - User approve -> bond -> subscribe to Oracle's endpoint
 - User connect to server websocket with params:
-  {
-    signature: {{sign endpoint's name with user's address}},
-    endpoint: {{endpoint name}},
-    address: {{user's address}}
-  }
+    + {
+    +  signature: {{sign endpoint's name with user's address}},
+    + endpoint: {{endpoint name}},
+    + address: {{user's address}}
+    +  }
 - After successful authenticated, user will be able to connect with websocket until the block remaining subscriptions is 0
 - User listen to channel `signalData` from Oracle and receive data
 
