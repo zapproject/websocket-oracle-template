@@ -1,7 +1,7 @@
-### MARKET SIGNAL ORACLE
+## MARKET SIGNAL ORACLE
 
 - Purpose : to provide a subscription service based on Zap oracle platform to manage subscriptions and distribute information through authenticated websocket connections.
-##### WORK FLOW
+### WORK FLOW
 *ORACLE*
 - Oracle has an endpoint with curve set for a subscription service (not to be queried)
 - Oracle creates authenticated websocket server
@@ -20,7 +20,7 @@
 - User listen to channel `signalData` from Oracle and receive data
 
 
-#### SETUP
+### SETUP
 - ``` yarn ```
 ##### Run Server:
 - Create `priv_config.ts` based on `config.ts` template with oracle's information
